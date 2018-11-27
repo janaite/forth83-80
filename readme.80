@@ -1,23 +1,23 @@
-.PO 3
+.PO 3
 
-	WELCOME TO FORTH  
+	WELCOME TO FORTH  
 
-     Thió   ió  á  publiã  domaiî  system¬   anä  maù  bå  freelù 
-distributeä anä copied¬  aó lonç aó thå authoró arå giveî  crediô 
-anä  nï copyrighô noticå ió placeä upoî it®  Iæ wå catcè  someonå 
-sellinç thió systeí aó theiò owî proprietarù product¬  witè theiò 
-copyrighô noticå ¬ wå wilì dï ouò besô tï makå theí regreô iô foò 
-thå  resô  oæ theiò lives®  Yoõ havå beeî  warned!¡ 	
+     This   is  a  public  domain  system,   and  may  be  freely 
+distributed and copied,  as long as the authors are given  credit 
+and  no copyright notice is placed upon it.  If we catch  someone 
+selling this system as their own proprietary product,  with their 
+copyright notice , we will do our best to make them regret it for 
+the  rest  of their lives.  You have been  warned!! 	
 
-     Thió  Fortè  useó thå fileó oæ thå  hosô  operatinç  system® 
-Althougè  thió reduceó performance¬  iô ió mucè morå portablå anä 
-morå convenienô foò novices®  Thå uså oæ fileó wilì bå  describeä 
+     This  Forth  uses the files of the  host  operating  system. 
+Although  this reduces performance,  it is much more portable and 
+more convenient for novices.  The use of files will be  described 
 later.
 
-     Thió  disë containó somå Huffmaî encodeä files®  Theù  allo÷ 
-thå  systeí  tï fiô oî onå floppù disk®   Youò firsô tasë  ió  tï 
-expanä  theí  intï thå sourcå fileó foò thå system®  Thå  Huffmaî 
-fileó anä theiò expansionó areº 
+     This  disk contains some Huffman encoded files.  They  allow 
+the  system  to fit on one floppy disk.   Your first task  is  to 
+expand  them  into the source files for the system.  The  Huffman 
+files and their expansions are: 
 
 M80.HUF        -->       META80.BLK
 K80.HUF        -->       KERNEL80.BLK 
@@ -29,159 +29,162 @@ HF.HUF         -->       HUFFMAN.BLK
 CK.HUF         -->       CLOCK.BLK
 FX.HUF         -->       F83-FIXS.TXT
 
-Iî additioî therå arå á fe÷ noî-compresseä files®   Theså arå thå 
+In addition there are a few non-compressed files.   These are the 
 following:
 
 README.80     This file which you are hopefully reading.
-RUNME.COM     Thå filå thaô yoõ wilì ruî tï creatå thå BLË files.
+RUNME.COM     The file that you will run to create the BLK files.
 EXPAND80.BLK  The file used to expand the HUF files.
 
-     Iî  ordeò  tï recoveò thå actuaì sourcå  code¬  simplù  typå 
-RUNMÅ  anä  follo÷  thå  directions®    Iæ  alì  goeó  well¬  thå 
-correspondinç  BLË fileó wilì bå created®   Yoõ shoulä oæ  courså 
-makå  backuğ  copieó oæ thå expandeä sourcå codå aó  sooî  aó  iô 
-exists®   Wå apologizå foò thå timå thå expansioî takes¬ buô sucè 
-ió life®   Yoõ arå no÷ iî á positioî tï modifù anä regeneratå thå 
+     In  order  to recover the actual source  code,  simply  type 
+RUNME  and  follow  the  directions.    If  all  goes  well,  the 
+corresponding  BLK files will be created.   You should of  course 
+make  backup  copies of the expanded source code as  soon  as  it 
+exists.   We apologize for the time the expansion takes, but such 
+is life.   You are now in a position to modify and regenerate the 
 system.
 
-     Tï  dï  so¬  yoõ shoulä puô META80.BLË anä  KERNEL80.BLË  oî 
-drivå B:¬ anä puô F83.COM oî drivå A:® Makå surå therå ió rooí oî 
-Aº  foò thå ne÷ KERNEL.COM¬  theî loç ontï drivå Bº  anä typå thå 
+     To  do  so,  you should put META86.BLK and  KERNEL86.BLK  on 
+drive B:, and put F83.COM on drive A:. Make sure there is room on 
+A:  for the new KERNEL.COM,  then log onto drive B:  and type the 
 following:
 
-B>A:F8³ META80.BLË ¨ ruî F8³ oî META80.BLË )
-OË ¨ loadó metá compileò anä generateó KERNEL.COM )
-BYÅ ¨ returî tï CP/Í )
+B>A:F83 META80.BLK ( run F83 on META80.BLK )
+OK ( loads meta compiler and generates KERNEL.COM )
+BYE ( return to CP/M )
 
-     No÷ yoõ havå á ne÷ KERNEL.COM oî Aº anä yoõ arå readù tï adä Šthå selecteä extensionó anä makå á ne÷ F83.COM ¨ yoõ diä bacë  uğ 
-thå  olä onå didn'ô you?)®  Puô  EXTEND80.BLK¬  CPU8080.BLK¬  anä 
+     Now you have a new KERNEL.COM on A: and you are ready to add 
+the selected extensions and make a new F83.COM ( you did back  up 
+the  old one didn't you?).  Put  EXTEND80.BLK,  CPU8080.BLK,  and 
 UTILITY.BLK on A: with KERNEL.COM and type the following:
 
-A>KERNEL EXTEND80.BLË ¨ ruî KERNEL80 oî EXTEND80.BLË )
-OK ¨ loadó alì extensionó anä createó ne÷ versioî oæ F83.COM )
-BYÅ ¨ returî tï CP/Í )
+A>KERNEL EXTEND80.BLK ( run KERNEL80 on EXTEND80.BLK )
+OK ( loads all extensions and creates new version of F83.COM )
+BYE ( return to CP/M )
 
-Yoõ  caî havå á printouô oæ theså instructionó bù usinç Controì Ğ 
-anä enterinç TYPÅ README.80
+You  can have a printout of these instructions by using Control P 
+and entering TYPE README.80
 
-     Iî  whaô  followó  thå <CR¾ symboì representó  thå  carriagå 
-returî  keù  oî  youò terminal®  Tï enteò  Fortè  froí  thå  CP/Í 
-environment¬  inserô  thå  disë containinç thå F83.COM filå  intï 
-drivå Á oæ youò computer¬  (afteò bootinç iô oæ course© anä  typå 
+     In  what  follows  the <CR> symbol represents  the  carriage 
+return  key  on  your terminal.  To enter  Forth  from  the  CP/M 
+environment,  insert  the  disk containing the F83.COM file  into 
+drive A of your computer,  (after booting it of course) and  type 
 F83<CR>
 
-     Forth will reply with:
+     Forth will reply with:
 
-8080 Forth 83 Model 2.0.0
-Modified 01Apr84
+8086 Forth 83 Model 2.0.0
+Modified 01Apr84
 
-     Fortè  ió abouô teî yearó olä no÷ (iî 1983© buô somå oæ  thå 
-featureó  oæ F8³ arå relativelù ne÷ tï thió Publiã  Domaiî  Fortè 
+     Forth  is about ten years old now (in 1983) but some of  the 
+features  of F83 are relatively new to this Public  Domain  Forth 
 Model.
-  
-     Thå VIE× commanä ió onå oæ thå best®  VIE× <word¾ <CR¾  wilì 
-finä  thå screeî thaô containó thå codå foò thå <word>¬  provideä 
-thaô  thå  filå thaô containó <word¾ ió oî thå  currentlù  loggeä 
-disë  drive®  Iæ yoõ caî fiô alì oæ thå sourcå codå oî  á  singlå 
-drive¬  VIE× workó great¬  anä takeó carå oæ openinç thå filå anä 
-displayinç  thå screeî foò you®   Á recenô additioî tï thå systeí 
-ió thå worä FIØ whicè combineó thå functioî oæ VIE× witè thaô  oæ 
-thå  editor®   Tï uså iô typå FIØ <word¾ <CR¾ anä thå screeî upoî 
-whicè thaô worä resideó wilì bå madå availablå foò editing¬  witè 
-thå editinç cursoò placeä followinç thå firsô occurancå oæ <word¾ 
+  
+     The VIEW command is one of the best.  VIEW <word> <CR>  will 
+find  the screen that contains the code for the <word>,  provided 
+that  the  file that contains <word> is on the  currently  logged 
+disk  drive.  If you can fit all of the source code on  a  single 
+drive,  VIEW works great,  and takes care of opening the file and 
+displaying  the screen for you.   A recent addition to the system 
+is the word FIX which combines the function of VIEW with that  of 
+the  editor.   To use it type FIX <word> <CR> and the screen upon 
+which that word resides will be made available for editing,  with 
+the editing cursor placed following the first occurance of <word> 
 on that screen.  
 
-     Wå  havå  alsï  trieä tï makå extensivå uså  oæ  thå  shado÷ 
-screeî  concept®  Iî thió regard¬  thå worä Á moveó yoõ froí  thå 
-currenô  screeî  tï  itó associateä  shado÷  screen®  Thå  SHADO× 
-vocabularù  containó  á  buncè  oæ  wordó  thaô  arå  helpfuì  iî 
-maintaininç  shado÷ screens®  COPÙ allowó yoõ tï copù noô onlù  á 
-screen¬  buô alsï itó associateä shadow®  SHO× allowó yoõ tï lisô 
-eacè  sourcå screeî acrosó froí itó shado÷ wheî yoõ wanô tï prinô 
-them®  Finallù  CONVEÙ allowó yoõ tï movå groupó oæ  screenó  anä 
-theiò  associateä  shadows®  Tï seå whaô wordó arå iî thå  SHADO× 
-vocabularù simplù typå SHADO× WORDS<CR>
+     We  have  also  tried to make extensive use  of  the  shadow 
+screen  concept.  In this regard,  the word A moves you from  the 
+current  screen  to  its associated  shadow  screen.  The  SHADOW 
+vocabulary  contains  a  bunch  of  words  that  are  helpful  in 
+maintaining  shadow screens.  COPY allows you to copy not only  a 
+screen,  but also its associated shadow.  SHOW allows you to list 
+each  source screen across from its shadow when you want to print 
+them.  Finally  CONVEY allows you to move groups of  screens  and 
+their  associated  shadows.  To see what words are in the  SHADOW 
+vocabulary simply type SHADOW WORDS<CR>
 
-     Therå  ió  alsï  á decompileò  presenô  whicè  reverseó  thå 
-compilinç  process¬  producinç sourcå codå froí objecô code®  Thå 
-useò  interfacå tï iô ió thå worä SEÅ <name¾ wherå <name¾ ió  thå 
-namå oæ á Fortè worä yoõ wisè tï decompile® Whilå thå informatioî 
-SEÅ giveó yoõ ió noô aó completå aó thaô giveî bù VIEW¬  á  leasô 
-iô ió alwayó available¬ anä noô dependenô upoî whetheò oò noô thå Šcorrecô filå ió presenô oî thå currentlù loggeä disë drive® Foò á 
-reaì  experiencå  trù decompilinç thå wordó STATUS¬  whicè  ió  á 
-DEFERreä  word¬   iå  aî  executioî  vector®   SEÅ  calló  itselæ 
-recursivelù iî thió caså anä trackó dowî thå definition® Thió caî 
-bå quitå handy.
+     There  is  also  a decompiler  present  which  reverses  the 
+compiling  process,  producing source code from object code.  The 
+user  interface to it is the word SEE <name> where <name> is  the 
+name of a Forth word you wish to decompile. While the information 
+SEE gives you is not as complete as that given by VIEW,  a  least 
+it is always available, and not dependent upon whether or not the 
+correct file is present on the currently logged disk drive. For a 
+real  experience  try decompiling the words STATUS,  which  is  a 
+DEFERred  word,   ie  an  execution  vector.   SEE  calls  itself 
+recursively in this case and tracks down the definition. This can 
+be quite handy.
 
-     Tï  seå á lisô oæ thå wordó thaô arå iî thå dictionarù  typå 
-WORDS® Yoõ wilì seå lotó oæ words® Eacè ió á commanä anä eacè caî 
-bå VIEWed®  WORDÓ wilì stoğ iæ yoõ hiô anù key®  Yoõ caî looë  aô 
-thå worä SHO× bù typinç VIE× SHOW®  Assuminç alì ió welì yoõ wilì 
-seå  á Fortè screeî containinç thå definitioî oæ SHO× alonç  witè 
-somå otheò words® Typå Á Ì (cr© anä yoõ wilì bå rewardeä witè thå 
-Shado÷ screeî thaô goeó witè it® Á Ì (cr© wilì Alternatå Lisô yoõ 
-bacë tï thå originaì screeî oæ code®  Looë aô iô anä wheî yoõ seå 
-á worä thaô doesn'ô seeí fullù selæ evident¬ VIE× iô anä reaä thå 
-shado÷  screen®  Thå  worä SHO× anä itó sourcå codå thaô wå  havå 
-beeî viewing¬  ió á commanä thaô printó ouô threå sourcå  screenó 
-alonç  witè  threå shadowó foò á totaì oæ siø screenó  peò  page® 
-Therå  arå  twï  versionó  oæ SHOW®  Thå vocabularù  yoõ  arå  iî 
-determineó  ho÷  SHO× wilì prinô out®  Iæ yoõ arå iî  thå  SHADO× 
-vocabulary¬  siø screenó oæ codå anä shadowó wilì print®  Iæ  yoõ 
-arå iî FORTÈ ¶ screenó oæ codå wilì bå printed.
+     To  see a list of the words that are in the dictionary  type 
+WORDS. You will see lots of words. Each is a command and each can 
+be VIEWed.  WORDS will stop if you hit any key.  You can look  at 
+the word SHOW by typing VIEW SHOW.  Assuming all is well you will 
+see  a Forth screen containing the definition of SHOW along  with 
+some other words. Type A L (cr) and you will be rewarded with the 
+Shadow screen that goes with it. A L (cr) will Alternate List you 
+back to the original screen of code.  Look at it and when you see 
+a word that doesn't seem fully self evident, VIEW it and read the 
+shadow  screen.  The  word SHOW and its source code that we  have 
+been viewing,  is a command that prints out three source  screens 
+along  with  three shadows for a total of six screens  per  page. 
+There  are  two  versions  of SHOW.  The vocabulary  you  are  in 
+determines  how  SHOW will print out.  If you are in  the  SHADOW 
+vocabulary,  six screens of code and shadows will print.  If  you 
+are in FORTH 6 screens of code will be printed.
 
-     No÷ foò somå morå commands®  Î ió nexô screeî anä Ì ió list® 
-Î Ì listó thå nexô screeî anä Â Ì listó thå nexô screeî  back®  Î 
-EÄ wilì ediô thå nexô screeî etc® No÷ letó printouô á fe÷ screenó 
-thaô  wilì  detaiì  somå oæ thå editoò commands®  Mosô  arå  froí 
-Startinç Fortè buô somå arå ne÷ ones.
+     Now for some more commands.  N is next screen and L is list. 
+N L lists the next screen and B L lists the next screen  back.  N 
+ED will edit the next screen etc. Now lets printout a few screens 
+that  will  detail  some of the editor commands.  Most  are  from 
+Starting Forth but some are new ones.
 
-Type this: EDITOR VIEW JOIN<CR>
+Type this: EDITOR VIEW JOIN<CR>
 
-     Yoõ arå lookinç aô á screeî oæ editinç commands®  Letó gï tï 
-thå shado÷ witè thå Á Ì commanä anä dï somå exploring®  Whilå  wå 
-arå  iî  thå  shadowó letó looë aô thå nexô fivå  oò  siø  shado÷ 
-screenó  thaô  shoulä bå editoò words®  Uså Î L®  Iæ yoõ  havå  á 
-printeò  yoõ  maù prinô theså screenó no÷ aó follows®  Typå  VIE× 
-WIPÅ  foò example®  Iæ wipå ió thå firsô oæ ¶ screenó  oæ  editoò 
-wordó remembeò thå screeî number®  Iæ foò instancå iô waó 8° theî 
-typå 8° 8µ SHADO× SHOW<CR>
+     You are looking at a screen of editing commands.  Lets go to 
+the shadow with the A L command and do some exploring.  While  we 
+are  in  the  shadows lets look at the next five  or  six  shadow 
+screens  that  should be editor words.  Use N L.  If you  have  a 
+printer  you  may print these screens now as follows.  Type  VIEW 
+WIPE  for example.  If wipe is the first of 6 screens  of  editor 
+words remember the screen number.  If for instance it was 80 then 
+type 80 85 SHADOW SHOW<CR>
 
-     No÷  á  brieæ worä abouô ouò masó  storagå  interface®   Ouò 
-Fortè  8³ systeí runó aó á guesô undeò á hosô system'ó  operatinç 
-system®   Becauså  oæ  this¬  wå uså thå host'ó  filå  systeí  tï 
-contaiî  ouò screeî files®   Screenó arå implementeä aó 1Ë blockó 
-withiî  á random accesó file®   Screenó arå stilì treateä  aó  1¶ 
-lineó  oæ 6´ characteró wheî editing¬  witè nï embeddeä  carriagå 
-returnó oò linå feeds®   Iî ordeò tï accesó á screeî filå iô musô 
-firsô bå opened®   Thió caî bå donå iî twï ways®  Thå mosô commoî 
-ió  tï  specifù thå namå oæ thå screeî filå oî thå executå  line®  
-Thuó  iæ yoõ wanteä tï opeî MY.BLË yoõ coulä firå uğ  Fortè  witè 
+     Now  a  brief word about our mass  storage  interface.   Our 
+Forth  83 system runs as a guest under a host system's  operating 
+system.   Because  of  this,  we use the host's  file  system  to 
+contain  our screen files.   Screens are implemented as 1K blocks 
+within  a random access file.   Screens are still treated  as  16 
+lines  of 64 characters when editing,  with no embedded  carriage 
+returns or line feeds.   In order to access a screen file it must 
+first be opened.   This can be done in two ways.  The most common 
+is  to  specify the name of the screen file on the execute  line.  
+Thus  if you wanted to open MY.BLK you could fire up  Forth  with 
 the following:
 
 A>F83 MY.BLK<CR>
-.paŠOncå  yoõ arå iî Forth¬  yoõ caî opeî otheò fileó witè thå  Fortè 
-worä OPEÎ <name¾ wherå <name¾ ió thå namå oæ thå filå yoõ wisè tï 
-open®   OPEÎ ió á defininç word¬  anä createó á dictionarù  entrù 
-usinç thå filå name®   Oncå á filå ió openeä BLOCË referenceó arå 
-relativå  tï thå beginninç oæ thå currentlù opeî file®   Afteò  á 
-filå  haó beeî openeä witè OPEN¬  iô maù bå reopeneä bù executinç 
-thå  filå  name®   Thió ió verù fast¬  sincå onlù  á  pointeò  ió 
-changeä  iî  memory®   Onå note¬  blocë ° ió stilì treateä  aó  á 
+.pa
+Once  you are in Forth,  you can open other files with the  Forth 
+word OPEN <name> where <name> is the name of the file you wish to 
+open.   OPEN is a defining word,  and creates a dictionary  entry 
+using the file name.   Once a file is opened BLOCK references are 
+relative  to the beginning of the currently open file.   After  a 
+file  has been opened with OPEN,  it may be reopened by executing 
+the  file  name.   This is very fast,  since only  a  pointer  is 
+changed  in  memory.   One note,  block 0 is still treated  as  a 
 special case, and hence can't be loaded.
 
                          FORTH EXAMPLES
 
-     Wå  woulä  likå tï answeò somå oæ thå mosô frequentlù  askeä 
-questionó  abouô thå F8³ systeí aô thió point®   Thå besô waù  tï 
-gaiî familiaritù witè thå systeí ió tï firå iô uğ anä trù ouô thå 
-followinç examples®   Wå wilì indicatå thå texô thaô yoõ typå  iî 
-aó uppeò caså text®   Thå texô iî parentheseó arå ouò commentó oî 
+     We  would  like to answer some of the most frequently  asked 
+questions  about the F83 system at this point.   The best way  to 
+gain familiarity with the system is to fire it up and try out the 
+following examples.   We will indicate the text that you type  in 
+as upper case text.   The text in parentheses are our comments on 
 what is going on.  The <CR> indicates carriage return, as usual.
 
 F83<CR> ( fire up forth from the CP/M environment )
-8080 Forth 83 Model 2.0.0 ( Forth's reply and )
-Modified 01Apr84          ( sign on message )
+8080 Forth 83 Model 2.0.0 ( Forth's reply and )
+Modified 01Apr84          ( sign on message )
 WORDS<CR>
 empty mark hello ....
 10 CREATE-FILE SAMPLE.BLK<CR> ( Creates a file called SAMPLE.BLK )
@@ -207,12 +210,13 @@ Enter your id: ..........
    ( I usually enter the date and my initials as follows: )
 10MAR84HHL<CR>
    ( The screen will be blanked and listed, you should have )
-   ¨ á resulô similaò tï ± LISÔ above¬  buô witè thå linå ) 
+   ( a result similar to 1 LIST above,  but with the line ) 
    ( number also appearing on the right hand side of the screen )
 
    ( Now we will enter the source code necessary to install )
    ( the cursor routine drivers for an ADM-3A terminal )
-.paŠ0 NEW<CR> 
+.pa
+0 NEW<CR> 
    ( This allows us to enter multiple lines of text.  The text )
    ( input is terminated with a null line.  After each line is )
    ( entered, it is redisplayed for you )
@@ -234,7 +238,7 @@ ADM-3A <CR>
 <CR>
 DONE<CR>
 1 modified
-   ¨ Typinç thaô lasô <CR¾ wilì returî yoõ tï Forth® The DONE )
+   ( Typing that last <CR> will return you to Forth. The DONE )
    ( command will write the text you entered to the disk, and )
    ( exit from the editing environment )
    ( To install the ADM-3A drivers you need now just type: )
@@ -261,22 +265,23 @@ BYE<CR>
    ( This exits Forth and returns to CP/M.  Now if you use )
    ( F.COM instead of F83.COM you will have your terminal )
    ( routines installed at boot up time. )
-.paŠ     Notå  thaô  thå  abovå routineó arå designeä foò  aî  ADM-3Á 
-terminal¬  anä  wilì noô worë iæ youò terminaì ió noô aî  ADM-3A®  
-Yoõ  wilì  havå tï consulô youò terminaì manuaì foò  thå  correcô 
-escapå  sequenceó  requireä iî ordeò tï positioî thå  cursoò  anä 
-implemenô thå otheò speciaì functionó required®   Á betteò waù tï 
-dï  thå  abovå  ió tï recompilå  thå  entirå  system¬  witè  youò 
-terminaì  routineó  installeä aó thå defaulô insteaä oæ thå  DUMÂ 
-terminaì  routineó  supplieä  witè  thå  system®    Iî  ordeò  tï 
-accomplisè thió yoõ shoulä copù thå screeî yoõ jusô entereä  intï 
-thå UTILITY.BLË filå anä recompilå thå systeí aó describeä above®  
-Thå  followinç  illustrateó ho÷ tï dï this¬  usinç thå  multifilå 
+.pa
+     Note  that  the  above routines are designed for  an  ADM-3A 
+terminal,  and  will not work if your terminal is not an  ADM-3A.  
+You  will  have to consult your terminal manual for  the  correct 
+escape  sequences  required in order to position the  cursor  and 
+implement the other special functions required.   A better way to 
+do  the  above  is to recompile  the  entire  system,  with  your 
+terminal  routines  installed as the default instead of the  DUMB 
+terminal  routines  supplied  with  the  system.    In  order  to 
+accomplish this you should copy the screen you just entered  into 
+the UTILITY.BLK file and recompile the system as described above.  
+The  following  illustrates how to do this,  using the  multifile 
 utility words implemented in F83.
 
 F83 UTILITY.BLK<CR>
    ( files up F83 and opens UTILITY.BLK as the default file.  )
-   ¨ Makå surå thaô UTILITY.BLË ió oî thå currentlù loggeä )
+   ( Make sure that UTILITY.BLK is on the currently logged )
    ( drive )
    ( Now find a blank or irelevant screen at the end of the )
    ( editors set of screens, on top of which we are going to )
@@ -295,93 +300,95 @@ START<CR>
    ( on the currently logged drive in order for this to work )
 
 
-     Iæ  yoõ  arå ne÷ tï Fortè youò besô beô ió tï  purchaså  thå 
-booë  STARTINÇ  FORTÈ  bù LEÏ BRODIE®  Iô costó  abouô  seventeeî 
-dollaró  anä ió availablå aô mosô largå booë stores®  Oî pagå  8´ 
-yoõ wilì finä thå commandó foò thå linå editor®  Anotheò valuablå 
-referencå ió thå ne÷ booë bù MARTIN TRACY calleä FORTH TOOLS®  Iô 
-ió  availablå froí MicroMotion¬  1207· Wilshirå Blvd®  Suitå 506¬ 
-Wesô Loó Angeles¬  CÁ 90025®   Thå pricå foò thå booë ió  $20.00®  
-Thå F8³ modeì followó botè thå booë anä thå Fortè 8³ standard® 
+     If  you  are new to Forth your best bet is to  purchase  the 
+book  STARTING  FORTH  by LEO BRODIE.  It costs  about  seventeen 
+dollars  and is available at most large book stores.  On page  84 
+you will find the commands for the line editor.  Another valuable 
+reference is the new book by MARTIN TRACY called FORTH TOOLS.  It 
+is  available from MicroMotion,  12077 Wilshire Blvd.  Suite 506, 
+West Los Angeles,  CA 90025.   The price for the book is  $20.00.  
+The F83 model follows both the book and the Forth 83 standard. 
 
-     Thå Fortè Interesô Grouğ ¨ FIÇ © haó chapteró iî manù areas® 
-Iî  thå  Saî  Franciscï Baù Area¬  meetingó arå helä oî  thå  4tè 
-Saturdaù oæ eacè month¬  currentlù aô Chaboô Collegå iî  Hayward¬ 
-CA®  Calì  thå  FIÇ  hoô  linå iæ yoõ wisè tï  doublå  checë  thå 
-locatioî pè 962-865³ oò thå FIÇ Treå BBÓ (30° baud© aô 538-3580.
-
-
-Henry Laxen                                  Mike Perry
-1259 Cornell Avenue                          1125 Bancroft Way
-Berkeley, CA 94706                           Berkeley, CA 94702
-.paŠ
-             System Memory Map  
-     Thå  memorù mağ wilì varù somewhaô witè CPU¬  anä  operatinç 
-system¬  anä  options®  Foò CP/Í oî thå 808° witè 64Ë oæ  memory¬ 
-witè fouò blocë bufferó anä alì utilities¬  iô ió aó  followsº  ¨ 
-alì addresseó iî hexadecimal)
-
-     0100      Jump to cold start
-     0104      Jump to warm start
-     0108 ----
-
-               Dictionary with all utilities loaded.
-
-     5E75 ---- HERE
-
-               Free space.
-
-     D10E ---- SP0, TIB
-
-               | Text Input Buffer
-               V
-                            ^
-               Return Stack |
-
-     D1D6 ---- RP0, >BUFFERS
-
-               Block Buffer Pointer Table
-
-     D200 ---- FIRST
-
-               Block Buffers
-
-     E200 ---- LIMIT
+     The Forth Interest Group ( FIG ) has chapters in many areas. 
+In  the  San  Francisco Bay Area,  meetings are held on  the  4th 
+Saturday of each month,  currently at Chabot College in  Hayward, 
+CA.  Call  the  FIG  hot  line if you wish to  double  check  the 
+location ph 962-8653 or the FIG Tree BBS (300 baud) at 538-3580.
 
 
-.PAŠ             Standard System Documentation Requirement
+Henry Laxen                                  Mike Perry
+1259 Cornell Avenue                          1125 Bancroft Way
+Berkeley, CA 94706                           Berkeley, CA 94702
+.pa
 
-1.  The  system  dictionary space is CPU  dependant  and  can  be 
-determined by typeing HERE U. <CR>
+             System Memory Map  
+     The  memory map will vary somewhat with CPU,  and  operating 
+system,  and  options.  For CP/M on the 8080 with 64K of  memory, 
+with four block buffers and all utilities,  it is as  follows:  ( 
+all addresses in hexadecimal)
 
-2. The application dictionary space is also CPU dependant and  is 
-the  difference  between  the  top  of  the  dictionary  and  the 
-beginning of the parameter stack.  The location of the  parameter 
-stack  varies depending on the amount of memory available to  the 
-machine.   The application dictionary space can be determined  by 
-typing SP@ HERE - U. <CR>
+     0100      Jump to cold start
+     0104      Jump to warm start
+     0108 ----
 
-3. The data stack space is the same as the dictionary space.
+               Dictionary with all utilities loaded.
 
-4.  The return stack space was arbitrarily set at 256 bytes.   It 
-can be altered by remeta-compiling the system.
+     5E75 ---- HERE
 
-5.  No  mass  storage block ranges are reserved  by  the  system, 
-other than the contents of the files that are distributed.
+               Free space.
 
-6. The user has available to him blocks 0 thru 65534.  Note  that 
-block  0  may  not be used for loading.  Block  number  65535  is 
-reserved to indicate the buffer is missing.
+     D10E ---- SP0, TIB
 
-7. Any ascii terminal should work with this system.  If the  user 
-has  a  cursor  addressable terminal, the editor  can  be  easily 
-modified to take advantage of the terminal's characteristics.
+               | Text Input Buffer
+               V
+                            ^
+               Return Stack |
 
-8. System action taken upon error conditions:
+     D1D6 ---- RP0, >BUFFERS
 
-     ' <name> ['] <name>  not found results in ? error message
-     
-     */ */MOD / /MOD MOD UM/MOD  all division by 0 errors  result      
+               Block Buffer Pointer Table
+
+     D200 ---- FIRST
+
+               Block Buffers
+
+     E200 ---- LIMIT
+
+
+.PA
+             Standard System Documentation Requirement
+
+1.  The  system  dictionary space is CPU  dependant  and  can  be 
+determined by typeing HERE U. <CR>
+
+2. The application dictionary space is also CPU dependant and  is 
+the  difference  between  the  top  of  the  dictionary  and  the 
+beginning of the parameter stack.  The location of the  parameter 
+stack  varies depending on the amount of memory available to  the 
+machine.   The application dictionary space can be determined  by 
+typing SP@ HERE - U. <CR>
+
+3. The data stack space is the same as the dictionary space.
+
+4.  The return stack space was arbitrarily set at 256 bytes.   It 
+can be altered by remeta-compiling the system.
+
+5.  No  mass  storage block ranges are reserved  by  the  system, 
+other than the contents of the files that are distributed.
+
+6. The user has available to him blocks 0 thru 65534.  Note  that 
+block  0  may  not be used for loading.  Block  number  65535  is 
+reserved to indicate the buffer is missing.
+
+7. Any ascii terminal should work with this system.  If the  user 
+has  a  cursor  addressable terminal, the editor  can  be  easily 
+modified to take advantage of the terminal's characteristics.
+
+8. System action taken upon error conditions:
+
+     ' <name> ['] <name>  not found results in ? error message
+     
+     */ */MOD / /MOD MOD UM/MOD  all division by 0 errors  result      
      in a 0 quotient
 
      : in the case of an error, a ? error message will be printed
@@ -403,4 +410,4 @@ modified to take advantage of the terminal's characteristics.
      standard  system,  I don't want to hear about it and I  hope 
      the system not only crashes, but burns.
 
-     LOAD if u is zero, the system will crash.  see DOŠ
+     LOAD if u is zero, the system will crash.  see DO
