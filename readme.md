@@ -56,22 +56,24 @@ file numbers will be set up correctly.
 
 Here are the files in this ARK:
 
---> FILE:  F83     .COM         The FORTH system compiled.
---> FILE:  README  .1ST         This file
---> FILE:  README  .80          Original F83 instructions
---> FILE:  F83-FIXS.TXT         Changes from F83 v.1.0
+- FILE:  F83     .COM         The FORTH system compiled.
+- FILE:  README  .1ST         This file
+- FILE:  README  .80          Original F83 instructions
+- FILE:  F83-FIXS.TXT         Changes from F83 v.1.0
 
 These "blocks" are the F83 sources
---> FILE:  KERNEL80.BLK         Kernel source
---> FILE:  META80  .BLK         Metacompiler source
---> FILE:  CPU8080 .BLK         8080 dependent code
---> FILE:  EXTEND80.BLK         Extensions source
---> FILE:  UTILITY .BLK         The UTILITY source 
+
+- FILE:  KERNEL80.BLK         Kernel source
+- FILE:  META80  .BLK         Metacompiler source
+- FILE:  CPU8080 .BLK         8080 dependent code
+- FILE:  EXTEND80.BLK         Extensions source
+- FILE:  UTILITY .BLK         The UTILITY source 
 
 These blocks are applications
---> FILE:  HUFFMAN .BLK         A VERY slow compression program
---> FILE:  CLOCK   .BLK         Source for a calendar example
---> FILE:  EXPAND80.BLK         Original source to expand .HUF
---> FILE:  BASIC   .BLK         BASIC compiler in F83
+
+- FILE:  HUFFMAN .BLK         A VERY slow compression program
+- FILE:  CLOCK   .BLK         Source for a calendar example
+- FILE:  EXPAND80.BLK         Original source to expand .HUF
+- FILE:  BASIC   .BLK         BASIC compiler in F83
 
 --Keith Petersen, W8SDZ  5-Feb-87
